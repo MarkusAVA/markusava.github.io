@@ -1,3 +1,15 @@
-.background{
+.bg1{
     background: linear-gradient(45deg, #57106a 25%, #4a32c3 60%, #ff0000 95%);
+}
+.buttono {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }
