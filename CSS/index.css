@@ -4,8 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* Linear gradient background for now */
-.bg1{
+.bg1 {
     background: linear-gradient(45deg, #57106a 25%, #4a32c3 60%, #ff0000 95%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,6 +15,7 @@
     margin: 0;
     padding: 0;
 }
+
 /* Styling for the header */
 .header {
     position: relative;
@@ -32,6 +34,7 @@
     display: flex;
     justify-content: center;
 }
+
 /* Styling for the buttons (for anchor tags) */
 .buttons a.button {
     margin: 0 10px;
@@ -49,35 +52,24 @@
 .buttons a.button:hover {
     background-color: #57106a; /* Hover color */
 }
+
 /* Hide the menu toggle by default */
 .menu-toggle {
     display: none;
     font-size: 24px;
     cursor: pointer;
     color: white;
-    align-self: right;
 }
+
 /* Styling for the favicon */
 .favicon img {
     width: 40px; /* Favicon size */
     height: 40px;
     border: 1px solid white;
 }
-.buttono {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #4CAF50; /* Green */
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Ensure the parent container has relative positioning */
     .header {
         position: relative; /* Establish a positioning context for the dropdown */
     }
@@ -107,17 +99,5 @@
     .menu-toggle {
         display: block; /* Show menu toggle button */
         cursor: pointer; /* Indicate that it's clickable */
-    }
-
-    .favicon {
-        order: 1; /* Move favicon to the top */
-    }
-
-    .menu-toggle {
-        order: 2; /* Move menu toggle button to the center */
-    }
-
-    .buttons {
-        order: 3; /* Move dropdown menu to the bottom */
     }
 }
