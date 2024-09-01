@@ -1,3 +1,10 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Linear gradient background for now */
 .bg1{
     background: linear-gradient(45deg, #57106a 25%, #4a32c3 60%, #ff0000 95%);
     background-repeat: no-repeat;
@@ -6,6 +13,53 @@
     width: 100vw;
     margin: 0;
     padding: 0;
+}
+/* Styling for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    height: 60px;
+    border-bottom: 2px solid white;
+}
+
+/* centering buttons */
+.buttons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+/* Styling for the buttons (for anchor tags) */
+.buttons a.button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4a32c3; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+.buttons a.button:hover {
+    background-color: #57106a; /* Hover color */
+}
+/* Hide the menu toggle by default */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+/* Styling for the favicon */
+.favicon img {
+    width: 40px; /* Favicon size */
+    height: 40px;
+    border: 1px solid white;
 }
 .buttono {
     display: inline-block;
@@ -18,4 +72,40 @@
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+}
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+    .buttons {
+        display: none; /* Hide buttons initially */
+        flex-direction: column;
+        width: 100%;
+        background-color: #4a32c3; /* Menu background color */
+    }
+
+    .buttons.show {
+        display: flex; /* Show buttons when menu is toggled */
+    }
+
+    .buttons a.button {
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu toggle button */
+    }
+
+    .favicon {
+        order: 1; /* Move favicon to the top */
+    }
+
+    .menu-toggle {
+        order: 2; /* Move menu toggle button to the center */
+    }
+
+    .buttons {
+        order: 3; /* Move dropdown menu to the bottom */
+    }
 }
