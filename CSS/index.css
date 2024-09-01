@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Linear gradient background for now */
+/* Linear gradient background */
 .bg1 {
     background: linear-gradient(45deg, #57106a 25%, #4a32c3 60%, #ff0000 95%);
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
     align-items: center;
 }
 
-/* Styling for the buttons (for anchor tags) */
+/* Styling for the buttons */
 .buttons a.button {
     margin: 0 10px;
     padding: 10px 20px;
@@ -63,14 +63,17 @@
 
 /* Styling for the favicon */
 .favicon img {
-    display: flex;
-    width: 40px; /* Favicon size */
+    width: 40px; /* Default favicon size */
     height: 40px;
     border: 1px solid white;
 }
 
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
+    .header {
+        position: relative; /* Establish positioning context for dropdown */
+    }
+
     .buttons {
         display: none; /* Hide buttons initially */
         flex-direction: column;
@@ -95,5 +98,11 @@
 
     .menu-toggle {
         display: block; /* Show menu toggle button */
+    }
+
+    /* Adjust favicon size for mobile */
+    .favicon img {
+        width: 30px; /* Adjust size as needed */
+        height: 30px;
     }
 }
