@@ -16,6 +16,7 @@
 }
 /* Styling for the header */
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,6 +55,7 @@
     font-size: 24px;
     cursor: pointer;
     color: white;
+    align-self: right;
 }
 /* Styling for the favicon */
 .favicon img {
@@ -75,11 +77,20 @@
 }
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
+    /* Ensure the parent container has relative positioning */
+    .header {
+        position: relative; /* Establish a positioning context for the dropdown */
+    }
+
     .buttons {
         display: none; /* Hide buttons initially */
         flex-direction: column;
         width: 100%;
         background-color: #4a32c3; /* Menu background color */
+        position: absolute; /* Position absolutely within the header */
+        top: 100%; /* Position below the toggle button */
+        left: 0;
+        z-index: 1000; /* Ensure it appears above other content */
     }
 
     .buttons.show {
@@ -95,6 +106,7 @@
 
     .menu-toggle {
         display: block; /* Show menu toggle button */
+        cursor: pointer; /* Indicate that it's clickable */
     }
 
     .favicon {
