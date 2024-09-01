@@ -63,6 +63,7 @@
 
 /* Styling for the favicon */
 .favicon img {
+    display: flex;
     width: 40px; /* Favicon size */
     height: 40px;
     border: 1px solid white;
