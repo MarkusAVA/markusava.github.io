@@ -102,7 +102,7 @@
 
     /* Adjust favicon size for mobile */
     .favicon img {
-        width: 30px; /* Adjust size as needed */
-        height: 30px;
+        width: 35px; /* Adjust size as needed */
+        height: 35px;
     }
 }
