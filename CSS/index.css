@@ -1,5 +1,6 @@
 .bg1{
     background: linear-gradient(45deg, #57106a 25%, #4a32c3 60%, #ff0000 95%);
+    background-repeat: no-repeat;
 }
 .buttono {
     display: inline-block;
