@@ -28,11 +28,11 @@
     border-bottom: 2px solid white;
 }
 
-/* centering buttons */
+/* Centering buttons */
 .buttons {
-    flex-grow: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Styling for the buttons (for anchor tags) */
@@ -70,17 +70,13 @@
 
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
-    .header {
-        position: relative; /* Establish a positioning context for the dropdown */
-    }
-
     .buttons {
         display: none; /* Hide buttons initially */
         flex-direction: column;
         width: 100%;
         background-color: #4a32c3; /* Menu background color */
         position: absolute; /* Position absolutely within the header */
-        top: 100%; /* Position below the toggle button */
+        top: 60px; /* Position below the header */
         left: 0;
         z-index: 1000; /* Ensure it appears above other content */
     }
@@ -98,6 +94,5 @@
 
     .menu-toggle {
         display: block; /* Show menu toggle button */
-        cursor: pointer; /* Indicate that it's clickable */
     }
 }
