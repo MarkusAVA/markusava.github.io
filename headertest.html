@@ -29,9 +29,33 @@
             <h1>Morn du som er her :P</h1><br><br>
             <p1>
                 Yo, Yo, Yo, Welcome, Welcome!
-            </p1>
+            </p1><br><br>
+            <p2>God dag, Vegar!</p2>
         </div>
-        <script src="JS/headertest.js"></script>
+        <script>
+    // Create a new XMLHttpRequest object
+  var xhr = new XMLHttpRequest();
+
+  console.log("Attempting to load header...");
+
+  xhr.open('GET', 'header.html', true);
+
+  xhr.onload = function () {
+    console.log("Request status:", xhr.status);
+    if (xhr.status >= 200 && xhr.status < 300) {
+      document.getElementById('header-placeholder').innerHTML = xhr.responseText;
+    } else {
+      console.error('Failed to load the header:', xhr.status, xhr.statusText);
+    }
+  };
+
+  xhr.onerror = function () {
+    console.error('Network error occurred.');
+  };
+
+  xhr.send();
+        </script>
+        <!--script src="JS/headertest.js"></script-->
 
     </body>
 </html>
