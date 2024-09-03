@@ -10,8 +10,15 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
         <meta charset="UTF-8">
         <title>MarkusAVA</title>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script>
+      $(function() {
+         $("#header-placeholder").load("header.html");
+      });
+   </script>
     </head>
     <body class="bg1">
+
         <div id="header-placeholder"></div>
            <!--header class="header">
                 <div class="favicon"> 
@@ -29,8 +36,7 @@
             <h1>Morn du som er her :P</h1><br><br>
             <p1>
                 Yo, Yo, Yo, Welcome, Welcome!
-            </p1><br><br>
-            <p2>God dag, Vegar!</p2>
+            </p1>
         </div>
         <script>
     // Create a new XMLHttpRequest object
