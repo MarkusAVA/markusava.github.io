@@ -10,12 +10,6 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
         <meta charset="UTF-8">
         <title>MarkusAVA</title>
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-   <script>
-      $(function() {
-         $("#header-placeholder").load("header.html");
-      });
-   </script>
     </head>
     <body class="bg1">
 
@@ -38,30 +32,7 @@
                 Yo, Yo, Yo, Welcome, Welcome!
             </p1>
         </div>
-        <script>
-    // Create a new XMLHttpRequest object
-  var xhr = new XMLHttpRequest();
-
-  console.log("Attempting to load header...");
-
-  xhr.open('GET', 'header.html', true);
-
-  xhr.onload = function () {
-    console.log("Request status:", xhr.status);
-    if (xhr.status >= 200 && xhr.status < 300) {
-      document.getElementById('header-placeholder').innerHTML = xhr.responseText;
-    } else {
-      console.error('Failed to load the header:', xhr.status, xhr.statusText);
-    }
-  };
-
-  xhr.onerror = function () {
-    console.error('Network error occurred.');
-  };
-
-  xhr.send();
-        </script>
-        <!--script src="JS/headertest.js"></script-->
+        <script src="JS/headertest.js">xhr();</script>
 
     </body>
 </html>
