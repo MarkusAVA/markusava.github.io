@@ -40,11 +40,11 @@ timerReset.onclick = function(){
 }
 
 function mangeHilsener(){
-    boks.innerHTML += "HEI";
+    boks.innerHTML += "SUP";
 }
 
 function hilsen(){
-    boks.innerHTML = "HEI";
+    boks.innerHTML = "SUP";
 }
 
 function skiftFarge(){
