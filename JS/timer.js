@@ -4,6 +4,8 @@ var boks = document.getElementById("boks");
 
 var idk = document.getElementById("idk");
 
+var box = document.getElementById("box")
+
 
 
 var timerStart = document.getElementById("timerStart");
@@ -36,15 +38,15 @@ timerRepeat.onclick = function(){
 timerReset.onclick = function(){
     /*Stoppe tidsuret*/
     clearTimeout(timerID);
-    boks.innerHTML = "";
+    box.innerHTML = "";
 }
 
 function mangeHilsener(){
-    boks.innerHTML += "SUP";
+    box.innerHTML += "SUP";
 }
 
 function hilsen(){
-    boks.innerHTML = "SUP";
+    box.innerHTML = "SUP";
 }
 
 function skiftFarge(){

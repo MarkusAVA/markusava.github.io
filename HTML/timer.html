@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
     <link rel="Stylesheet" href="../CSS/timer.css">
+    <link rel="Stylesheet" href="../CSS/index.css">
     <title>Document</title>
 
 </head>
@@ -15,22 +16,22 @@
         </div> 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         <div class="buttons" id="menu">
-            <a href="/index.html" class="button">Main</a>
+            <a href="MarkusAVA.github.io\index.html" class="button">Main</a>
             <a href="../HTML/aboutme.html" class="button">About me</a>
             <a href="../HTML/comingsoon.html" class="button">Coming soon</a>
             <a href="../HTML/timer.html" class="button">Timer thingy</a>
         </div>
     </header>
-    <input type="radio" name="farge" id="red" checked="checked" value="red" onclick="skiftFarge();"><label>Red</label><br>
-    <input type="radio" id="green" name="farge" value="green" onclick="skiftFarge();"><label>Grean</label><br>
-    <input type="radio" id="blue" name="farge" value="blue" onclick="skiftFarge();"><label>Blue</label><br>
-    <input type="radio" id="rgb" name="farge" value="rgb" onclick="skiftFarge();"><label>rgb</label><br>
+    <label><input type="radio" name="farge" id="red" checked="checked" value="red" onclick="skiftFarge();"> Red</label><br>
+    <label><input type="radio" id="green" name="farge" value="green" onclick="skiftFarge();"> Green</label><br>
+    <label> <input type="radio" id="blue" name="farge" value="blue" onclick="skiftFarge();"> Blue</label><br>
+    <label><input type="radio" id="rgb" name="farge" value="rgb" onclick="skiftFarge();"> rgb</label><br>
     <input type="range" id="seks" min="500" max="5000" value="2750" step="100"> <label id="idk"><p2>ms</p2></label><br>
 
     <p1>P.S you can change the colour of the box with buttons as well.<br>
        Press "R" for red, "B" for blue, and "G" for green.</p1><br>
 
-    <div id="boks"></div>
+    <div id="boks"><p2 id="box"></p2></div>
     <button id="timerStart">Hello</button>
     <button id="timerRepeat">Many Hello's</button>
     <button id="timerReset">Reset</button>
