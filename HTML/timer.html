@@ -9,6 +9,18 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="favicon"> 
+            <img src="../Visuals/Favicons/MarkusAVA-favicon.png" alt="MarkusAVA">
+        </div> 
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="buttons" id="menu">
+            <a href="/index.html" class="button">Main</a>
+            <a href="../HTML/aboutme.html" class="button">About me</a>
+            <a href="../HTML/comingsoon.html" class="button">Coming soon</a>
+            <a href="../HTML/timer.html" class="button">Timer thingy</a>
+        </div>
+    </header>
     <input type="radio" name="farge" id="red" checked="checked" value="red" onclick="skiftFarge();"><label>Red</label><br>
     <input type="radio" id="green" name="farge" value="green" onclick="skiftFarge();"><label>Grean</label><br>
     <input type="radio" id="blue" name="farge" value="blue" onclick="skiftFarge();"><label>Blue</label><br>
@@ -24,9 +36,8 @@
     <button id="timerReset">Reset</button>
 
 
-    <script src="../JS/timer.js">
-
-    </script>
+    <script src="../JS/timer.js"></script>
+    <script src="../JS/index.js"></script>
     
 </body>
 </html>
