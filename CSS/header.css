@@ -48,7 +48,7 @@
 
 /* Class to play the first half of the animation */
 .halfway-animation {
-    animation: playFirstHalf 0.635s forwards; /* First half duration */
+    animation: playFirstHalf 0.635s steps(15) forwards; /* Step function to go through 15 frames */
 }
 
 /* Class to freeze on the last frame of the first half */
@@ -59,7 +59,7 @@
 
 /* Class to play the second half of the animation */
 .finish-animation {
-    animation: playSecondHalf 0.635s forwards; /* Second half duration */
+    animation: playSecondHalf 0.635s steps(15) forwards; /* Step function for second half */
 }
 
 /* Class to freeze on the last frame of the second half */
