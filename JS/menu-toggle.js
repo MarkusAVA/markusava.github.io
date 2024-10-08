@@ -1,5 +1,3 @@
-// menu-toggle.js
-
 // Track the state of the animation
 let animationState = 0;  // 0: start, 1: first half played, 2: frozen after first half, 3: second half played, 4: frozen after second half
 

@@ -5,7 +5,7 @@ const headerHTML = `
         <img src="../Visuals/Favicons/MarkusAVA-favicon.png" alt="MarkusAVA">
     </div> 
     <div class="menu-toggle">
-        <div id="menu-icon" class=""></div> <!-- Initially no class, animation starts after click -->
+        <div id="menu-icon" class=""></div> <!-- Initially shows no animation -->
     </div>
     <div class="buttons" id="menu">
         <a href="../index.html" class="button">Home</a>
