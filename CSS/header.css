@@ -1,0 +1,69 @@
+/* Basic styling for the menu toggle icon */
+#menu-icon {
+    width: 50px; 
+    height: 50px;
+    background-image: url('../Visuals/Spritesheets/menu1-sprite.png'); /* Path to the 30-frame sprite sheet */
+    background-size: 250px 300px; /* Full size of the sprite sheet */
+}
+
+/* First-half animation keyframes (frames 1 to 15) */
+@keyframes playFirstHalf {
+    0% { background-position: 0 0; }        /* Frame 1 */
+    6.67% { background-position: -50px 0; } /* Frame 2 */
+    13.33% { background-position: -100px 0; } /* Frame 3 */
+    20% { background-position: -150px 0; }  /* Frame 4 */
+    26.67% { background-position: -200px 0; } /* Frame 5 */
+    33.33% { background-position: 0 -50px; } /* Frame 6 */
+    40% { background-position: -50px -50px; } /* Frame 7 */
+    46.67% { background-position: -100px -50px; } /* Frame 8 */
+    53.33% { background-position: -150px -50px; } /* Frame 9 */
+    60% { background-position: -200px -50px; } /* Frame 10 */
+    66.67% { background-position: 0 -100px; } /* Frame 11 */
+    73.33% { background-position: -50px -100px; } /* Frame 12 */
+    80% { background-position: -100px -100px; } /* Frame 13 */
+    86.67% { background-position: -150px -100px; } /* Frame 14 */
+    93.33% { background-position: -200px -100px; } /* Frame 15 */
+    100% { background-position: -200px -100px; } /* Hold on Frame 15 */
+}
+
+/* Second-half animation keyframes (frames 16 to 30) */
+@keyframes playSecondHalf {
+    0% { background-position: 0 -150px; } /* Frame 16 */
+    6.67% { background-position: -50px -150px; } /* Frame 17 */
+    13.33% { background-position: -100px -150px; } /* Frame 18 */
+    20% { background-position: -150px -150px; } /* Frame 19 */
+    26.67% { background-position: -200px -150px; } /* Frame 20 */
+    33.33% { background-position: 0 -200px; } /* Frame 21 */
+    40% { background-position: -50px -200px; } /* Frame 22 */
+    46.67% { background-position: -100px -200px; } /* Frame 23 */
+    53.33% { background-position: -150px -200px; } /* Frame 24 */
+    60% { background-position: -200px -200px; } /* Frame 25 */
+    66.67% { background-position: 0 -250px; } /* Frame 26 */
+    73.33% { background-position: -50px -250px; } /* Frame 27 */
+    80% { background-position: -100px -250px; } /* Frame 28 */
+    86.67% { background-position: -150px -250px; } /* Frame 29 */
+    93.33% { background-position: -200px -250px; } /* Frame 30 */
+    100% { background-position: -200px -250px; } /* Hold on Frame 30 */
+}
+
+/* Class to play the first half of the animation */
+.halfway-animation {
+    animation: playFirstHalf 0.635s forwards; /* First half duration */
+}
+
+/* Class to freeze on the last frame of the first half */
+.frozen {
+    background-position: -200px -100px; /* Frame 15 */
+    animation: none; /* No animation */
+}
+
+/* Class to play the second half of the animation */
+.finish-animation {
+    animation: playSecondHalf 0.635s forwards; /* Second half duration */
+}
+
+/* Class to freeze on the last frame of the second half */
+.final-frozen {
+    background-position: -200px -250px; /* Frame 30 */
+    animation: none; /* No animation */
+}

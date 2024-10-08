@@ -1,5 +1,5 @@
-// Define the toggleMenu function
-let clickCount = 0;
+// Track the state of the animation
+let animationState = 0;  // 0: start, 1: first half played, 2: frozen after first half, 3: second half played, 4: frozen after second half
 
 function toggleMenu() {
     var menu = document.getElementById("menu");
@@ -8,15 +8,35 @@ function toggleMenu() {
     if (menu) {
         menu.classList.toggle("show");
 
-        // Toggle between the two halves of the animation
-        if (clickCount === 0) {
-            // First click: Play the first half of the GIF
-            menuIcon.src = "../Visuals/Gifs/menu1-p1.gif";  // Replace with actual first-half GIF URL
-            clickCount = 1;
-        } else if (clickCount === 1) {
-            // Second click: Play the second half of the GIF
-            menuIcon.src = "../Visuals/Gifs/menu1-p2.gif"; // Replace with actual second-half GIF URL
-            clickCount = 0;
+        if (animationState === 0) {
+            // First click: Play the first half of the animation (frames 1-15)
+            menuIcon.classList.remove("finish-animation", "frozen", "final-frozen");
+            menuIcon.classList.add("halfway-animation");
+            animationState = 1;  // Move to the state after the first half
+        } 
+        else if (animationState === 1) {
+            // After the first half: Freeze on frame 15
+            menuIcon.classList.remove("halfway-animation");
+            menuIcon.classList.add("frozen");  // Apply frozen class to stop on frame 15
+            animationState = 2;  // Move to frozen state after first half
+        } 
+        else if (animationState === 2) {
+            // Second click: Play the second half of the animation (frames 16-30)
+            menuIcon.classList.remove("frozen");
+            menuIcon.classList.add("finish-animation");
+            animationState = 3;  // Move to the state after the second half
+        } 
+        else if (animationState === 3) {
+            // After the second half: Freeze on frame 30
+            menuIcon.classList.remove("finish-animation");
+            menuIcon.classList.add("final-frozen");  // Apply frozen class to stop on frame 30
+            animationState = 4;  // Move to frozen state after second half
+        } 
+        else if (animationState === 4) {
+            // Reset: Click while frozen on frame 30, reset to frame 1
+            menuIcon.classList.remove("final-frozen");
+            menuIcon.style.backgroundPosition = "0 0";  // Reset background to frame 1
+            animationState = 0;  // Reset state to initial
         }
     }
 }
@@ -28,15 +48,16 @@ const headerHTML = `
         <img src="../Visuals/Favicons/MarkusAVA-favicon.png" alt="MarkusAVA">
     </div> 
     <div class="menu-toggle">
-        <img src="../Visuals/Gifs/menu1-p1.gif" id="menu-icon" alt="Menu Toggle Icon" style="display: block;">
+        <div id="menu-icon" class="halfway-animation"></div> <!-- Initially shows the first half -->
     </div>
     <div class="buttons" id="menu">
-        <a href="index.html" class="button">Main</a>
+        <a href="../index.html" class="button">Home</a>
         <a href="../HTML/aboutme.html" class="button">About me</a>
         <a href="../HTML/comingsoon.html" class="button">Coming soon</a>
         <a href="../HTML/timer.html" class="button">Timer thingy</a>
     </div>
 </header>
+
 `;
 
 // Insert the hardcoded header HTML into the placeholder
