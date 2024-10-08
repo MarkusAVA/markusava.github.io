@@ -6,7 +6,7 @@ function toggleMenu() {
     var xhr = new XMLHttpRequest();
 
     // Open the GET request to fetch header.html
-    xhr.open('GET', 'header.html', true);
+    xhr.open('GET', '../HTML/header.html', true);
 
     // When the request is loaded
     xhr.onload = function () {
