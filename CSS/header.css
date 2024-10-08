@@ -1,33 +1,40 @@
+/* Basic styling for the menu toggle icon */
+#menu-icon {
+    width: 50px; 
+    height: 50px;
+    background-image: url('../Visuals/Spritesheets/menu1-sprite2.png'); /* Path to the 30-frame sprite sheet */
+    background-size: 250px 300px; /* Full size of the sprite sheet */
+}
 /* First-half animation (frames 1 to 15) */
 @keyframes playFirstHalf {
     0% { background-position: 0 0; }
-    100% { background-position: -200px -100px; } /* Frame 15 */
+    100% { background-position: -700px 0; } /* Frame 15 */
 }
 
 /* Second-half animation (frames 16 to 30) */
 @keyframes playSecondHalf {
-    0% { background-position: -250px -150px; } /* Frame 16 */
-    100% { background-position: -200px -250px; } /* Frame 30 */
+    0% { background-position: -750px 0; } /* Frame 16 */
+    100% { background-position: -1450px 0; } /* Frame 30 */
 }
 
-/* Play first half (slowed down to 1.5 seconds) */
+/* Play first half (1.5 seconds) */
 .halfway-animation {
     animation: playFirstHalf 1.5s steps(15) forwards;
 }
 
 /* Freeze on frame 15 */
 .frozen {
-    background-position: -200px -100px; /* Frame 15 */
+    background-position: -700px 0; /* Frame 15 */
     animation: none; /* No animation, freeze */
 }
 
-/* Play second half (slowed down to 1.5 seconds) */
+/* Play second half (1.5 seconds) */
 .finish-animation {
     animation: playSecondHalf 1.5s steps(15) forwards;
 }
 
 /* Freeze on frame 30 */
 .final-frozen {
-    background-position: -200px -250px; /* Frame 30 */
+    background-position: -1450px 0; /* Frame 30 */
     animation: none; /* No animation, freeze */
 }

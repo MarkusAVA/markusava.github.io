@@ -30,9 +30,9 @@ function toggleMenu() {
             // Reset to initial state after freezing
             setTimeout(function() {
                 menuIcon.classList.remove("final-frozen");
-                menuIcon.style.backgroundPosition = "0 0";  // Reset to frame 1
+                menuIcon.style.backgroundPosition = "0 0";  // Immediately reset to frame 1
                 animationState = 0;  // Reset animation state
-            }, 1500);  // After another 1.5 seconds (final freeze duration)
+            }, 0);  // No delay for reset to frame 1
         }, 1500);  // Wait for the second half to finish (1.5 seconds)
     }
 }
