@@ -15,7 +15,6 @@ const headerHTML = `
     </div>
 </header>
 
-
 `;
 
 // Insert the hardcoded header HTML into the placeholder
