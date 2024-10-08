@@ -1,18 +1,18 @@
-/* First-half animation keyframes (frames 1 to 15) */
+/* First-half animation (frames 1 to 15) */
 @keyframes playFirstHalf {
     0% { background-position: 0 0; }
     100% { background-position: -200px -100px; } /* Frame 15 */
 }
 
-/* Second-half animation keyframes (frames 16 to 30) */
+/* Second-half animation (frames 16 to 30) */
 @keyframes playSecondHalf {
     0% { background-position: -250px -150px; } /* Frame 16 */
     100% { background-position: -200px -250px; } /* Frame 30 */
 }
 
-/* Play first half */
+/* Play first half (slowed down to 1.5 seconds) */
 .halfway-animation {
-    animation: playFirstHalf 0.635s steps(15) forwards; /* 15 frames in 0.635 seconds */
+    animation: playFirstHalf 1.5s steps(15) forwards;
 }
 
 /* Freeze on frame 15 */
@@ -21,9 +21,9 @@
     animation: none; /* No animation, freeze */
 }
 
-/* Play second half */
+/* Play second half (slowed down to 1.5 seconds) */
 .finish-animation {
-    animation: playSecondHalf 0.635s steps(15) forwards; /* Second half: frames 16-30 */
+    animation: playSecondHalf 1.5s steps(15) forwards;
 }
 
 /* Freeze on frame 30 */
