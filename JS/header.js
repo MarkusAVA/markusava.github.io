@@ -15,8 +15,6 @@ const headerHTML = `
     </div>
 </header>
 
-<!-- External JavaScript file link -->
-<script src="../JS/menu-toggle.js"></script>
 
 `;
 
