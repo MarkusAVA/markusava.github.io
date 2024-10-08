@@ -120,7 +120,3 @@ seks.onchange = function(){
     timerTid = seks.value;
     idk.innerHTML = seks.value + "ms";
 }
-
-
-
-ontouchmove
