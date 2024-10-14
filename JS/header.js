@@ -8,7 +8,7 @@ const headerHTML = `
         <div id="menu-icon" class=""></div> <!-- Initially shows no animation -->
     </div>
     <div class="buttons" id="menu">
-        <a href="../index.html" class="button">Home</a>
+        <a href="../" class="button">Home</a>
         <a href="../HTML/aboutme.html" class="button">About me</a>
         <a href="../HTML/comingsoon.html" class="button">Coming soon</a>
         <a href="../HTML/timer.html" class="button">Timer thingy</a>
