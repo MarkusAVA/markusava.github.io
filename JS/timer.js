@@ -19,6 +19,8 @@ var green = document.getElementById("green");
 var blue = document.getElementById("blue");
 var rgb = document.getElementById("rgb")
 
+var i = 0;
+let colors = ['green', 'red', 'blue', 'purple', 'turqouise'];
 var timerID;
 var timerTid = seks.value;
 idk.innerHTML = seks.value + "ms";
@@ -51,29 +53,14 @@ function hilsen(){
     box.innerHTML = "SUP";
 }
 
-farge.onclick = function(){
-    if (red.checked){
-        document.querySelector(".boks").style.backgroundColor = "red";
-        boks.style = "background-color: red";
-        console.log("Red");
+function changeColor(){
+    boks.style.backgroundColor = colors[i];
+    i++;
+    if (i>colors.length){
+        i=0;
     }
-    if (green.checked){
-        document.querySelector(".boks").style.backgroundColor = "green";
-        boks.style = "background-color: green";
-        console.log("Green");
-    }
-    if (blue.checked){
-        document.querySelector(".boks").style.backgroundColor = "blue";
-        boks.style = "background-color: blue";   
-        console.log("Blue");             
-    }
-    if (rgb.checked){
-        document.querySelector(".boks").style.backgroundColor = "rgb(red, green, blue)";
-        boks.style = "background-color: rgb(red, green, blue)";  
-        console.log("RGB B*TCH!");              
-    }
-}
-/*
+} 
+
 red.onclick = function(){
     boks.style = "background-color: red";
 }
@@ -84,14 +71,8 @@ blue.onclick = function(){
     boks.style = "background-color: blue";
 }
 rgb.onclick = function(){
-    boks.style = "background-color: red";
-    boks.style = "background-color: green";
-    boks.style = "background-color: blue";
-    boks.style = "background-color: purple";
-    boks.style = "background-color: yellow";
-    boks.style = "background-color: orange";
-    boks.style = "background-color: turquoise";
-}*/
+    setInterval(changeColor, timerTid);
+}
 
 document.addEventListener("keydown", function(evt){
     if (evt.key === "r"){
