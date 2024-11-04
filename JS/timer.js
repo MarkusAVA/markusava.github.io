@@ -6,6 +6,8 @@ var idk = document.getElementById("idk");
 
 var box = document.getElementById("box")
 
+var farge = document.getElementsByName("farge")
+
 
 
 var timerStart = document.getElementById("timerStart");
@@ -49,7 +51,7 @@ function hilsen(){
     box.innerHTML = "SUP";
 }
 
-function skiftFarge(){
+farge.onclick = function(){
     if (red.checked){
         boks.style = "background-color: red";
     }
@@ -120,3 +122,7 @@ seks.onchange = function(){
     timerTid = seks.value;
     idk.innerHTML = seks.value + "ms";
 }
+document.querySelector('.red').addEventListener('click', skiftFarge);
+document.querySelector('.green').addEventListener('click', skiftFarge);
+document.querySelector('.blue').addEventListener('click', skiftFarge);
+document.querySelector('.rgb').addEventListener('click', skiftFarge);
