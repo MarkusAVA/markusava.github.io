@@ -53,16 +53,24 @@ function hilsen(){
 
 farge.onclick = function(){
     if (red.checked){
+        document.querySelector(".boks").style.backgroundColor = "red";
         boks.style = "background-color: red";
+        console.log("Red");
     }
     if (green.checked){
+        document.querySelector(".boks").style.backgroundColor = "green";
         boks.style = "background-color: green";
+        console.log("Green");
     }
     if (blue.checked){
-        boks.style = "background-color: blue";                
+        document.querySelector(".boks").style.backgroundColor = "blue";
+        boks.style = "background-color: blue";   
+        console.log("Blue");             
     }
     if (rgb.checked){
-        boks.style = "background-color: rgb(red, green, blue)";                
+        document.querySelector(".boks").style.backgroundColor = "rgb(red, green, blue)";
+        boks.style = "background-color: rgb(red, green, blue)";  
+        console.log("RGB B*TCH!");              
     }
 }
 /*
@@ -122,7 +130,3 @@ seks.onchange = function(){
     timerTid = seks.value;
     idk.innerHTML = seks.value + "ms";
 }
-document.querySelector('.red').addEventListener('click', skiftFarge);
-document.querySelector('.green').addEventListener('click', skiftFarge);
-document.querySelector('.blue').addEventListener('click', skiftFarge);
-document.querySelector('.rgb').addEventListener('click', skiftFarge);
